@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battery test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  </head>
+
+  <body ng-app="app">
+    <battery-level level="{{level}}" charging="true"></battery-level>
+
+
+    <input ng-model="level" type="number">
+
+    <script src="../../demo/angular.min.js"></script>
+    <script src="../../tmp/templates/templates.min.js"></script>
+    <script src="../../tmp/battery-level.js"></script>
+
+    <script type="text/javascript">
+    angular.module("app", ["batteryLevel"]);
+    </script>
+  </body>
+</html>
