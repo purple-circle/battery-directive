@@ -1,0 +1,30 @@
+{
+  "name": "angular-battery-directive",
+  "version": "0.0.1",
+  "homepage": "https://github.com/purple-circle/battery-directive",
+  "authors": [
+    "Juha Tauriainen <juha@bin.fi>"
+  ],
+  "description": "Angular.js Battery Level Directive",
+  "main": "dist/battery-level.min.js",
+  "keywords": [
+    "battery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/js/node_modules/bower_components",
+    "test",
+    "tests",
+    "tmp",
+    "demo",
+    "package.json",
+    "gulpfile.*",
+    "src"
+  ],
+  "dependencies": {
+    "angular": ">=1.3.15"
+  }
+}
