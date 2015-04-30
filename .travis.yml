@@ -2,10 +2,10 @@ language: node_js
 
 node_js:
   - 0.10
-  - 0.11
 
 before_install:
   - npm install -g gulp
+  - curl -Lo chrome.zip https://download-chromium.appspot.com/dl/Linux_x64 && unzip chrome.zip
 
 before_script:
   - webdriver-manager update --standalone
@@ -16,5 +16,5 @@ before_script:
   - sleep 5 # wait for selenium server to actually come up
 
 script:
-  - node test/server.js
+  - nohup bash -c "node test/server.js 2>&1 &"
   - gulp ci
