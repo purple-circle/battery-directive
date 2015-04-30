@@ -36,7 +36,7 @@ gulp.task "test", ->
 gulp.task "partials", (done) ->
  gulp
     .src("src/partials/**/*.html")
-    .pipe(ngTemplates())
+    .pipe(ngTemplates('batteryTemplates'))
     .pipe(gulp.dest("tmp/templates"))
 
 

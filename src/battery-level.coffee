@@ -1,4 +1,4 @@
-module = angular.module('batteryLevel', ['templates', 'materialBatteryIcon'])
+module = angular.module('batteryLevel', ['batteryTemplates', 'materialBatteryIcon'])
 module.directive 'batteryLevel', ($timeout, $interval) ->
   templateUrl: "battery-level.html"
   restrict: 'E'

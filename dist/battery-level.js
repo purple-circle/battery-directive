@@ -100,7 +100,7 @@
 (function() {
   var module;
 
-  module = angular.module('batteryLevel', ['templates', 'materialBatteryIcon']);
+  module = angular.module('batteryLevel', ['batteryTemplates', 'materialBatteryIcon']);
 
   module.directive('batteryLevel', ["$timeout", "$interval", function($timeout, $interval) {
     return {
@@ -207,4 +207,4 @@
 
 }).call(this);
 
-angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("battery-level.html","<battery-icon icon=\"{{batteryLevel}}\" ng-if=\"batteryLevel\"></battery-icon>");}]);
+angular.module("batteryTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("battery-level.html","<battery-icon icon=\"{{batteryLevel}}\" ng-if=\"batteryLevel\"></battery-icon>");}]);
