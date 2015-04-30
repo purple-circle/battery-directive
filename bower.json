@@ -22,7 +22,8 @@
     "demo",
     "package.json",
     "gulpfile.*",
-    "src"
+    "src",
+    "coffeelint.json"
   ],
   "dependencies": {
     "angular": ">=1.3.15"
