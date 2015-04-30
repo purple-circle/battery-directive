@@ -1,4 +1,4 @@
-describe('Check battery levels, not charging, development version', function() {
+describe('Check battery levels, not charging, build version', function() {
   beforeEach(function() {
     browser.get('http://localhost:3000/test/pages/not-charging-build.html');
   });
