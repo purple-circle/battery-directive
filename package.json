@@ -2,7 +2,6 @@
   "name": "battery-directive",
   "version": "0.0.2",
   "description": "Angular battery directive",
-  "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },

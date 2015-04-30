@@ -16,5 +16,5 @@ before_script:
   - sleep 5 # wait for selenium server to actually come up
 
 script:
-  - node app.js
+  - node test/server.js
   - gulp ci
