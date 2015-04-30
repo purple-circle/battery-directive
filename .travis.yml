@@ -6,9 +6,9 @@ node_js:
 
 before_install:
   - npm install -g gulp
-  - webdriver-manager update --standalone
 
 before_script:
+  - webdriver-manager update --standalone
   - webdriver-manager start
   - cd test && node app.js
 
