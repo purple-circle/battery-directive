@@ -12,7 +12,8 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   # Immune to logouts, but not VM deprovisions!
-  - nohup bash -c "webdriver-manager start 2>&1 &"
+  - nohup bash -c "./node_modules/protractor/bin/webdriver-manager start 2>&1 &"
+  - sleep 5 # wait for selenium server to actually come up
   - cd test && node app.js
 
 
