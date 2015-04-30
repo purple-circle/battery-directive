@@ -1,5 +1,8 @@
 # Angular Battery Level Directive
 
+## Install from bower
+
+`bower install angular-battery-directive --save`
 
 ## Usage:
 
