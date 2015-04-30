@@ -66,6 +66,10 @@ gulp.task "build", ["coffee", "partials"], ->
   gutil.log "Build complete"
 
 
+gulp.task "ci", ["build-min", "build"], ->
+  gulp.start("test")
+
+
 gulp.task "coffeelint", ->
  gulp
     .src("src/**/*.coffee")
