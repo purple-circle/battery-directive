@@ -7,15 +7,16 @@ node_js:
 before_install:
   - npm install -g gulp
 
+install:
+  - ./node_modules/protractor/bin/webdriver-manager update --standalone
+
 before_script:
-  - webdriver-manager update --standalone
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   # Immune to logouts, but not VM deprovisions!
   - nohup bash -c "./node_modules/protractor/bin/webdriver-manager start 2>&1 &"
   - sleep 5 # wait for selenium server to actually come up
-  - cd test && node app.js
-
 
 script:
+  - node app.js
   - gulp ci
