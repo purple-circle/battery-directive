@@ -9,6 +9,6 @@ exports.config = {
     showColors: true,
     isVerbose: true
   },
-  rootElement: "body",
+  rootElement: 'body',
   specs: ['specs/**/*.js']
 };

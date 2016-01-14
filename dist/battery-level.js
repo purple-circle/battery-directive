@@ -104,11 +104,11 @@
 
   module.directive('batteryLevel', ["$timeout", "$interval", function($timeout, $interval) {
     return {
-      templateUrl: "battery-level.html",
+      templateUrl: 'battery-level.html',
       restrict: 'E',
       scope: {
-        level: "@",
-        charging: "="
+        level: '@',
+        charging: '='
       },
       link: function($scope) {
         var alertsGiven, batteryAlertInterval, isManual, processBatteryLevel;
@@ -119,18 +119,14 @@
         batteryAlertInterval = null;
         processBatteryLevel = function(battery) {
           var batteryLevel, charging, isCharging, level;
-          if (typeof $scope.charging !== "undefined") {
-            isCharging = $scope.charging;
-          } else {
-            isCharging = battery.charging;
-          }
-          batteryLevel = "unknown";
+          isCharging = $scope.charging != null ? $scope.charging : battery.charging;
+          batteryLevel = 'unknown';
           charging = '';
           if (isCharging) {
-            charging = "_charging";
+            charging = '_charging';
           }
           if (battery.level == null) {
-            return $scope.batteryLevel = "battery_unknown";
+            return $scope.batteryLevel = 'battery_unknown';
           } else if (battery.level < 0.1 && !isCharging) {
             batteryLevel = alertsGiven % 2 === 0 ? 'alert' : 20;
             $interval.cancel(batteryAlertInterval);
@@ -161,15 +157,15 @@
               batteryLevel = 90;
             }
             if (level >= 100) {
-              batteryLevel = "full";
+              batteryLevel = 'full';
             }
             return $scope.batteryLevel = "battery" + charging + "_" + batteryLevel;
           }
         };
         isManual = function() {
-          return typeof $scope.level !== "undefined" && $scope.level !== "";
+          return $scope.level !== void 0 && $scope.level !== '';
         };
-        return $scope.$watch("level", function() {
+        return $scope.$watch('level', function() {
           var battery;
           if (isManual()) {
             battery = {
