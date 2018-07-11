@@ -1,5 +1,7 @@
 # Angular Battery Level Directive
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/purple-circle/battery-directive.svg)](https://greenkeeper.io/)
+
 ## Install from bower
 
 `bower install angular-battery-directive --save`
