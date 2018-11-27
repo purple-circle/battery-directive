@@ -22,7 +22,7 @@
     "gulp-ng-templates": "0.0.10",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
-    "gulp-protractor": "4.1.0",
+    "gulp-protractor": "4.1.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.6",
     "protractor": "^5.3.2"
