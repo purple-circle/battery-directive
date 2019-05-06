@@ -14,7 +14,7 @@
   "devDependencies": {
     "coffee-script": "^1.9.1",
     "express": "^4.13.3",
-    "gulp": "^3.8.11",
+    "gulp": "^4.0.2",
     "gulp-coffee": "^3.0.2",
     "gulp-coffeelint": "^0.6.0",
     "gulp-concat": "^2.6.0",
