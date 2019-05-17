@@ -13,7 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "coffee-script": "^1.9.1",
-    "express": "^4.13.3",
+    "express": "4.16.4",
     "gulp": "^3.8.11",
     "gulp-coffee": "^3.0.2",
     "gulp-coffeelint": "^0.6.0",
